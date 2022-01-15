@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="stylesheet" href="css/datetime.css">
+    <link rel="stylesheet" href="css/greeting.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/quotes.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <script src="src/calendar.js" defer></script>
+    <script src="src/canvas.js" defer></script>
+    <script src="src/datetime.js" defer></script>
+    <script src="src/greeting.js" defer></script>
+    <script src="src/music.js" defer></script>
+    <script src="src/quotes.js" defer></script>
+    <script src="src/todo.js" defer></script>
+    <script src="src/weather.js" defer></script>
+  </head>
+  <body>
+    <section class="login">
+      <form class="login-form">
+        <div class="login__text">Save your time with noteboard</div>
+        <input class="login__input" type="text" placeholder="What is your name?"/>
+        <button class="login__button" type="submit">Log In</button>
+      </form>
+    </section>
+    <section class="board">
+      <div class="main-container">
+        <header class="board__header">
+            <div class="welcome">Hope your day is going well, user</div>
+            <div class="clock"></div>
+            <div class="date"></div>
+        </header>
+        <section class="quote">
+          <span class="quote__text"></span>
+          <span class="quote__author"></span>
+        </section>
+        <div class="schedule">
+          <section class="calendar"></section>
+          <section class="todo">
+            <ul class="todo__items"></ul>
+            <form class="todo__form">
+              <input class="todo__input" type="text">
+              <button class="todo__button" type="submit"></button>
+            </form>
+          </section>
+        </div>
+      </div>
+      <section class="weather">
+        <div class="weather__icon"></div>
+        <div class="weather__temp"></div>
+        <div class="weather__city"></div>
+      </section>
+      <section class="music-player"></section>
+      <section class="canvas"></section>
+    </section>
+  </section>
+  </body>
+</html>
+
+
