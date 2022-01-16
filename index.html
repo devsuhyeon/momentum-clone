@@ -27,7 +27,7 @@
   <body>
     <section class="login">
       <form class="login-form">
-        <div class="login__text">Save your time with noteboard</div>
+        <h1 class="login__text">Save your time with noteboard</h1>
         <input class="login__input" type="text" placeholder="What is your name?"/>
         <button class="login__button" type="submit">Log In</button>
       </form>
@@ -35,9 +35,9 @@
     <section class="board">
       <div class="main-container">
         <header class="board__header">
-            <div class="welcome">Hope your day is going well, user</div>
-            <div class="clock"></div>
-            <div class="date"></div>
+            <h3 class="welcome">Hope your day is going well, user</h3>
+            <h2 class="clock"></h2>
+            <h2 class="date"></h2>
         </header>
         <section class="quote">
           <span class="quote__text"></span>
@@ -48,22 +48,24 @@
           <section class="todo">
             <ul class="todo__items"></ul>
             <form class="todo__form">
-              <input class="todo__input" type="text">
-              <button class="todo__button" type="submit"></button>
+              <input class="todo__input" type="text" placeholder="Write a Todo and Press Enter">
+              <button class="todo__button" type="submit">
+                <i class="fas fa-plus"></i>
+              </button>
             </form>
           </section>
         </div>
       </div>
-      <section class="weather">
-        <div class="weather__icon"></div>
-        <div class="weather__temp"></div>
-        <div class="weather__city"></div>
-      </section>
-      <section class="music-player"></section>
-      <section class="canvas"></section>
+      <div class="side-container">
+        <section class="weather">
+          <img class="weather__icon"></img>
+          <div class="weather__temp"></div>
+          <div class="weather__city"></div>
+        </section>
+        <section class="music-player"></section>
+        <section class="canvas"></section>
+      </div>
     </section>
   </section>
   </body>
 </html>
-
-
