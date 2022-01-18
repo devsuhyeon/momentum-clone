@@ -3,9 +3,9 @@ const clock = document.querySelector('.clock');
 
 function getClock() {
   const today = new Date();
-  const hour = today.getHours();
-  const minuate = today.getMinutes();
-  const second = today.getSeconds();
+  const hour = String(today.getHours()).padStart(2, '0');
+  const minuate = String(today.getMinutes()).padStart(2, '0');
+  const second = String(today.getSeconds()).padStart(2, '0');
   clock.innerText = `${hour}:${minuate}:${second}`;
 }
 
