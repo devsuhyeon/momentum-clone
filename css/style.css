@@ -40,6 +40,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  margin-top: 8rem;
+  background: url('../images/seasons/winter/winter2.jpg') no-repeat center/cover;
+  overflow: hidden;
 }
 
 a {
@@ -59,4 +62,52 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+.board,
+.main-container,
+.side-container {
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  border-right: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+  height: 85%;
+  padding: 4.2em;
+  margin: auto;
+  backdrop-filter: blur(25px);
+  border-radius: var(--size-border-radius-large);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  overflow-y: none;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+.containers {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  width: 70%;
+  padding: 2.8em 3.2em;
+  background-color: var(--color-white-opacity);
+  border-radius: var(--size-border-radius-medium);
+}
+
+.side-container {
+  width: 30%;
+  margin-left: calc(var(--base-space) * 2);
+  padding: 2.8em 3.2em;
+  border-radius: var(--size-border-radius-medium);
+  background-color: var(--color-white-opacity);
 }
