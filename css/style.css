@@ -1,0 +1,62 @@
+/* Global */
+:root {
+  /* Color */
+  --color-black: rgb(43, 41, 41);
+  --color-white-opacity: rgba(255, 255, 255, 0.15);
+
+  /* Font size */
+  --font-large: 2.4rem;
+  --font-medium: 1.8rem;
+  --font-regular: 1.6rem;
+  --font-small: 1.4rem;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --base-space: 1.6rem;
+  --size-border-radius-large: 4rem;
+  --size-border-radius-medium: 2.8rem;
+  --size-border-radius-regular: 1.2rem;
+  --size-border-radius-small: 0.8rem;
+
+  /* Annimation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
