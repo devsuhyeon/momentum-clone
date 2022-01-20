@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Momentum</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/apps.css">
     <link rel="stylesheet" href="css/canvas.css">
     <link rel="stylesheet" href="css/datetime.css">
     <link rel="stylesheet" href="css/greeting.css">
@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="src/calendar.js" defer></script>
     <script src="src/canvas.js" defer></script>
     <script src="src/datetime.js" defer></script>
     <script src="src/greeting.js" defer></script>
@@ -34,6 +33,7 @@
         <button class="login__button" type="submit">Log In</button>
       </form>
     </section> -->
+    <div class="board-container">
     <section class="board">
       <section class="seasons">
         <div class="season spring"></div>
@@ -55,14 +55,6 @@
             <span class="quote__author"></span>
           </section>
           <div class="main-body-container">
-            <ul class="apps">
-              <li class="app"><a href="https://www.google.com/" target="_blacnk" data-app-type="google"></a></li>
-              <li class="app"><a href="https://www.youtube.com/" target="_blacnk" data-app-type="youtube"></a></li>
-              <li class="app"><a href="https://www.linkedin.com/" target="_blacnk" data-app-type="linkedin"></a></li>
-              <li class="app"><a href="https://twitter.com/" target="_blacnk" data-app-type="twitter"></a></li>
-              <li class="app"><a href="https://www.facebook.com/" target="_blacnk" data-app-type="facebook"></a></li>
-              <li class="app"><a href="https://www.instagram.com/" target="_blacnk" data-app-type="instagram"></a></li>
-            </ul>
             <section class="todo">
               <div class="todo__lists">
                 <div class="todo__list moring">
@@ -112,7 +104,15 @@
           <section class="canvas"></section>
         </div>
       </div>
+      <ul class="apps">
+        <li class="app"><a href="https://www.google.com/" target="_blacnk" data-app-type="google"></a></li>
+        <li class="app"><a href="https://www.youtube.com/" target="_blacnk" data-app-type="youtube"></a></li>
+        <li class="app"><a href="https://www.linkedin.com/" target="_blacnk" data-app-type="linkedin"></a></li>
+        <li class="app"><a href="https://twitter.com/" target="_blacnk" data-app-type="twitter"></a></li>
+        <li class="app"><a href="https://www.facebook.com/" target="_blacnk" data-app-type="facebook"></a></li>
+        <li class="app"><a href="https://www.instagram.com/" target="_blacnk" data-app-type="instagram"></a></li>
+      </ul>
     </section>
-  </section>
+  </div>
   </body>
 </html>

@@ -6,9 +6,10 @@
 
   /* Font size */
   --font-large: 2.4rem;
-  --font-medium: 1.8rem;
-  --font-regular: 1.6rem;
-  --font-small: 1.4rem;
+  --font-medium: 2rem;
+  --font-regular: 1.8rem;
+  --font-small: 1.5rem;
+  --font-micro: 1.3rem;
 
   /* Font weight */
   --weight-bold: 700;
@@ -16,11 +17,11 @@
   --weight-regular: 400;
 
   /* Size */
-  --base-space: 1.6rem;
   --size-border-radius-large: 4rem;
   --size-border-radius-medium: 2.8rem;
-  --size-border-radius-regular: 1.2rem;
-  --size-border-radius-small: 0.8rem;
+  --size-border-radius-regular: 1.4rem;
+  --size-border-radius-small: 1rem;
+  --size-border-radius-micro: 0.8rem;
 
   /* Annimation */
   --animation-duration: 300ms;
@@ -40,9 +41,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  margin-top: 8rem;
   background: url('../images/seasons/winter/winter2.jpg') no-repeat center/cover;
   overflow: hidden;
+  user-select: none;
 }
 
 a {
@@ -64,13 +65,8 @@ button {
   outline: none;
 }
 
-.board,
-.main-container,
-.side-container {
-  border-top: 3px solid rgba(255, 255, 255, 0.2);
-  border-left: 3px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-  border-right: 2px solid rgba(255, 255, 255, 0.15);
+.board-container {
+  padding-top: 8rem;
 }
 
 .board {
@@ -78,13 +74,11 @@ button {
   flex-direction: column;
   position: relative;
   width: 70%;
-  height: 85%;
   padding: 4.2em;
   margin: auto;
   backdrop-filter: blur(25px);
   border-radius: var(--size-border-radius-large);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  overflow-y: none;
+  border: 2.5px solid rgba(255, 255, 255, 0.25);
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 0.15) 0%,
@@ -99,15 +93,29 @@ button {
 
 .main-container {
   width: 70%;
-  padding: 2.8em 3.2em;
+  padding: 2.2em;
   background-color: var(--color-white-opacity);
   border-radius: var(--size-border-radius-medium);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.board__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.main-body-container {
+  display: flex;
+  width: 100%;
+  margin-top: 0.8rem;
 }
 
 .side-container {
   width: 30%;
-  margin-left: calc(var(--base-space) * 2);
-  padding: 2.8em 3.2em;
+  margin-left: 3.2rem;
+  padding: 2.2em;
   border-radius: var(--size-border-radius-medium);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   background-color: var(--color-white-opacity);
 }

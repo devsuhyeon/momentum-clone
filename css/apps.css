@@ -1,7 +1,10 @@
 .apps {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-white-opacity);
+  position: absolute;
+  right: -8rem;
+  bottom: 6rem;
+  background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--size-border-radius-small);
   padding: 0.4rem 0.8rem;
@@ -9,7 +12,7 @@
 }
 
 .app {
-  background-color: var(--color-white-opacity);
+  background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
   border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--size-border-radius-small);
