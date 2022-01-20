@@ -1,0 +1,10 @@
+.welcome {
+  width: 70%;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  background-color: var(--color-white-opacity);
+  border-radius: var(--size-border-radius-small);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  padding: 1.6rem;
+}
