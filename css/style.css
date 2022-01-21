@@ -5,15 +5,15 @@
   --color-white-opacity: rgba(255, 255, 255, 0.15);
 
   /* Font size */
-  --font-large: 2.4rem;
+  --font-large: 2.6rem;
   --font-medium: 2rem;
   --font-regular: 1.8rem;
-  --font-small: 1.5rem;
-  --font-micro: 1.3rem;
+  --font-small: 1.6rem;
+  --font-micro: 1.4rem;
 
   /* Font weight */
   --weight-bold: 700;
-  --weight-semi-bold: 600;
+  --weight-semi-bold: 500;
   --weight-regular: 400;
 
   /* Size */
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -76,7 +76,7 @@ button {
   width: 70%;
   padding: 4.2em;
   margin: auto;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(30px);
   border-radius: var(--size-border-radius-large);
   border: 2.5px solid rgba(255, 255, 255, 0.25);
   background: radial-gradient(
