@@ -41,52 +41,53 @@ const musicList = [
 ];
 
 let playOrder = 0;
+let isPlaying = false;
 
 playBtn.addEventListener('click', () => {
   const icon = playBtn.querySelector('i');
   const music = musicList[playOrder];
 
   if (icon.classList.contains('fa-play')) {
+    isPlaying = true;
     icon.classList.add('fa-pause');
     icon.classList.remove('fa-play');
     playSound(music.sound);
+    startCoverRotation();
   } else {
+    isPlaying = false;
     icon.classList.add('fa-play');
     icon.classList.remove('fa-pause');
     stopSound(music.sound);
+    stopCoverRotation();
   }
 });
 
 prevBtn.addEventListener('click', () => {
   stopSound(musicList[playOrder].sound);
   playOrder === 0 ? (playOrder = 3) : playOrder--;
-  const precMusic = musicList[playOrder];
-  playSound(precMusic.sound);
-  getCover(precMusic);
-  getTitle(precMusic);
-  console.log(playOrder);
+  const prevMusic = musicList[playOrder];
+  getCover(prevMusic);
+  getTitle(prevMusic);
+  isPlaying && playSound(prevMusic.sound);
+  isPlaying && startCoverRotation();
 });
 
 nextBtn.addEventListener('click', () => {
   stopSound(musicList[playOrder].sound);
   playOrder === musicList.length - 1 ? (playOrder = 0) : playOrder++;
   const nextMusic = musicList[playOrder];
-  playSound(nextMusic.sound);
   getCover(nextMusic);
   getTitle(nextMusic);
-  console.log(playOrder);
+  isPlaying && playSound(nextMusic.sound);
+  isPlaying && startCoverRotation();
 });
 
 function playSound(sound) {
-  sound.currentTime = 0;
   sound.play();
-  cover.classList.add('play');
-  cover.style.animationPlayState = 'running';
 }
 
 function stopSound(sound) {
   sound.pause();
-  cover.style.animationPlayState = 'paused';
 }
 
 function getCover(music) {
@@ -95,4 +96,11 @@ function getCover(music) {
 
 function getTitle(music) {
   title.innerText = music.title;
+}
+
+function startCoverRotation() {
+  cover.classList.add('playing');
+}
+function stopCoverRotation() {
+  cover.classList.remove('playing');
 }
