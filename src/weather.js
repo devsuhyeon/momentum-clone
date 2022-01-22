@@ -7,7 +7,7 @@ function onGeoSuccess(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
 
-  fetch('./apikeys.json')
+  fetch('/src/apikeys.json')
     .then((response) => response.json())
     .then((data) => {
       const API_KEY = data.apikeys.openweathermap;
