@@ -57,11 +57,42 @@ playBtn.addEventListener('click', () => {
   }
 });
 
+prevBtn.addEventListener('click', () => {
+  stopSound(musicList[playOrder].sound);
+  playOrder === 0 ? (playOrder = 3) : playOrder--;
+  const precMusic = musicList[playOrder];
+  playSound(precMusic.sound);
+  getCover(precMusic);
+  getTitle(precMusic);
+  console.log(playOrder);
+});
+
+nextBtn.addEventListener('click', () => {
+  stopSound(musicList[playOrder].sound);
+  playOrder === musicList.length - 1 ? (playOrder = 0) : playOrder++;
+  const nextMusic = musicList[playOrder];
+  playSound(nextMusic.sound);
+  getCover(nextMusic);
+  getTitle(nextMusic);
+  console.log(playOrder);
+});
+
 function playSound(sound) {
   sound.currentTime = 0;
   sound.play();
+  cover.classList.add('play');
+  cover.style.animationPlayState = 'running';
 }
 
 function stopSound(sound) {
   sound.pause();
+  cover.style.animationPlayState = 'paused';
+}
+
+function getCover(music) {
+  cover.src = music.cover;
+}
+
+function getTitle(music) {
+  title.innerText = music.title;
 }
