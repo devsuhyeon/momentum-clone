@@ -1,0 +1,35 @@
+.canvas-appbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.canvas {
+  width: 50%;
+  height: 5.4rem;
+}
+
+.canvas__btn {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white-opacity);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--size-border-radius-micro);
+  transition: all var(--animation-duration) ease-out;
+}
+
+.canvas__btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.canvas__icon {
+  width: 100%;
+  height: 100%;
+  background: url('../images/icons/canvas.png') no-repeat 38px 7px;
+  background-size: 3.6rem;
+  opacity: 0.7;
+  transition: all var(--animation-duration) ease-out;
+}
+.canvas__icon:hover {
+  opacity: 1;
+}
