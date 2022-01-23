@@ -21,9 +21,10 @@
 }
 
 .weather__description {
-  width: 10rem;
+  width: 8rem;
   font-size: var(--font-micro);
   font-weight: var(--weight-bold);
+  text-align: center;
   margin: 0 auto;
   transform: translateY(-2.4rem);
 }
