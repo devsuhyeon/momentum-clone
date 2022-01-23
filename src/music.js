@@ -68,6 +68,7 @@ prevBtn.addEventListener('click', () => {
   const prevMusic = musicList[playOrder];
   getCover(prevMusic);
   getTitle(prevMusic);
+  initMusicTime(prevMusic.sound);
   isPlaying && playSound(prevMusic.sound);
   isPlaying && startCoverRotation();
 });
@@ -78,6 +79,7 @@ nextBtn.addEventListener('click', () => {
   const nextMusic = musicList[playOrder];
   getCover(nextMusic);
   getTitle(nextMusic);
+  initMusicTime(nextMusic.sound);
   isPlaying && playSound(nextMusic.sound);
   isPlaying && startCoverRotation();
 });
@@ -101,6 +103,11 @@ function getTitle(music) {
 function startCoverRotation() {
   cover.classList.add('playing');
 }
+
 function stopCoverRotation() {
   cover.classList.remove('playing');
+}
+
+function initMusicTime(sound) {
+  sound.currentTime = 0;
 }
