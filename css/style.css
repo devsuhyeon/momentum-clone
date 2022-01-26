@@ -44,6 +44,7 @@ body {
   background: url('../images/seasons/winter/winter2.jpg') no-repeat center/cover;
   overflow: hidden;
   user-select: none;
+  position: relative;
 }
 
 a {
