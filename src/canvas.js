@@ -37,6 +37,7 @@ function onMouseMove(event) {
 }
 
 function handleCanvasClick() {
+  painting = true;
   if (filling) {
     console.log(canvasBoard.width);
     console.log(canvasBoard.height);
@@ -49,10 +50,9 @@ function handleContextMenu(event) {
 }
 
 canvasBoard.addEventListener('mousemove', onMouseMove);
-canvasBoard.addEventListener('mousedown', startPainting);
+canvasBoard.addEventListener('mousedown', handleCanvasClick);
 canvasBoard.addEventListener('mouseup', stopPainting);
 canvasBoard.addEventListener('mouseleave', stopPainting);
-canvasBoard.addEventListener('click', handleCanvasClick);
 canvasBoard.addEventListener('contextmenu', handleContextMenu);
 
 canvasOpenBtn.addEventListener('click', () => {
