@@ -1,5 +1,8 @@
 const canvasModal = document.querySelector('.canvas-modal');
 const canvasBoard = document.querySelector('.canvas-board');
+const colors = document.querySelector('.controls__colors');
+const paintingColor = document.querySelector('.painting-color');
+
 const canvasOpenBtn = document.querySelector('.canvas__btn');
 const canvasCloseBtn = document.querySelector('.canvas-close');
 const ctx = canvasBoard.getContext('2d');
@@ -29,10 +32,6 @@ function onMouseMove(event) {
   }
 }
 
-function onMouseDown(event) {
-  painting = true;
-}
-
 canvasBoard.addEventListener('mousemove', onMouseMove);
 canvasBoard.addEventListener('mousedown', startPainting);
 canvasBoard.addEventListener('mouseup', stopPainting);
@@ -46,4 +45,13 @@ canvasOpenBtn.addEventListener('click', () => {
 
 canvasCloseBtn.addEventListener('click', () => {
   canvasModal.classList.add('hidden');
+});
+
+colors.addEventListener('click', (event) => {
+  const color = event.target.style.backgroundColor;
+  if (!color) {
+    return;
+  }
+  ctx.strokeStyle = color;
+  paintingColor.style.color = color;
 });
