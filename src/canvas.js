@@ -1,5 +1,6 @@
 const canvasModal = document.querySelector('.canvas-modal');
 const canvasBoard = document.querySelector('.canvas-board');
+const range = document.querySelector('.controls__range .range');
 const colors = document.querySelector('.controls__colors');
 const paintingColor = document.querySelector('.painting-color');
 
@@ -47,6 +48,7 @@ canvasCloseBtn.addEventListener('click', () => {
   canvasModal.classList.add('hidden');
 });
 
+// Chaning color
 colors.addEventListener('click', (event) => {
   const color = event.target.style.backgroundColor;
   if (!color) {
@@ -54,4 +56,9 @@ colors.addEventListener('click', (event) => {
   }
   ctx.strokeStyle = color;
   paintingColor.style.color = color;
+});
+
+// Brush Size
+range.addEventListener('input', (event) => {
+  ctx.lineWidth = event.target.value;
 });
