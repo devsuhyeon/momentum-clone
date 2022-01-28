@@ -30,6 +30,6 @@ seasons.addEventListener('click', (event) => {
 
 function changeBackgound(season, images) {
   const chosenImage = images[Math.floor(Math.random() * images.length)];
-  const imageURL = `../images/seasons/${season}/${chosenImage}`;
+  const imageURL = `./images/seasons/${season}/${chosenImage}`;
   document.body.style.backgroundImage = `url(${imageURL})`;
 }

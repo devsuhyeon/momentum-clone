@@ -5,13 +5,13 @@ const prevBtn = document.querySelector('.music-player__prev');
 const nextBtn = document.querySelector('.music-player__next');
 
 const music1 = new Audio(
-  '../music/Severin & Like Lions - I Hear Sleigh Bells [NCS Release].mp3'
+  './music/Severin & Like Lions - I Hear Sleigh Bells [NCS Release].mp3'
 );
-const music2 = new Audio('../music/Alisky - On [NCS Release].mp3');
+const music2 = new Audio('./music/Alisky - On [NCS Release].mp3');
 const music3 = new Audio(
-  '../music/Arc North - Symphony (feat. Donna Tella) [NCS Release].mp3'
+  './music/Arc North - Symphony (feat. Donna Tella) [NCS Release].mp3'
 );
-const music4 = new Audio('../music/OVSKY - Lucky Charm [NCS Release].mp3');
+const music4 = new Audio('./music/OVSKY - Lucky Charm [NCS Release].mp3');
 
 const musicList = [
   {

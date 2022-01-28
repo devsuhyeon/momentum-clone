@@ -27,7 +27,7 @@
   margin: auto;
   transform: translate(-50%, -50%);
   box-shadow: 4px 8px 10px 1px rgba(0, 0, 0, 0.2);
-  background: url('/images/window.png') no-repeat -2.6rem -1rem;
+  background: url('./images/window.png') no-repeat -2.6rem -1rem;
   background-size: 48rem;
 }
 
