@@ -6,14 +6,10 @@ const weatherDescription = document.querySelector('.weather__description');
 function onGeoSuccess(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
+  const WEATHER_API = config.apikey;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API}&units=metric`;
 
-  fetch('/src/apikeys.json')
-    .then((response) => response.json())
-    .then((data) => {
-      const API_KEY = data.apikeys.openweathermap;
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-      return fetch(url);
-    })
+  fetch(url)
     .then((response) => response.json())
     .then((data) => {
       const city = data.name;
